@@ -1,0 +1,13 @@
+{
+  "version": "1.0.0",
+  "plugins": [
+    {
+      "name": "journalism-skills",
+      "description": "Agentic skills for journalism",
+      "version": "1.0.0",
+      "source": {
+        "type": "local"
+      }
+    }
+  ]
+}
