@@ -1,13 +1,14 @@
 {
-  "version": "1.0.0",
+  "name": "journalism-skills",
+  "owner": {
+    "name": "spmartin823"
+  },
   "plugins": [
     {
       "name": "journalism-skills",
       "description": "Agentic skills for journalism",
       "version": "1.0.0",
-      "source": {
-        "type": "local"
-      }
+      "source": "."
     }
   ]
 }
