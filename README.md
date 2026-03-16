@@ -2,12 +2,26 @@
 
 Agentic skills for journalism.
 
-## Setup
-
-This repo is used as a git submodule. To connect it to your Claude Code skills, symlink it to `.claude/skills`:
+## Install as a Claude Code plugin
 
 ```bash
-ln -s ../../journalism-skills .claude/skills
+claude plugin install journalism-skills@spmartin823/journalism-skills
 ```
 
-This assumes the submodule is cloned at the root of your project and `.claude/` already exists.
+Or test locally during development:
+
+```bash
+claude --plugin-dir ./journalism-skills
+```
+
+## Usage
+
+Skills are namespaced under `journalism-skills`:
+
+```
+/journalism-skills:new-skill
+```
+
+## Available skills
+
+- **new-skill** — Scaffolds a new skill by walking you through a series of questions.

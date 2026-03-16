@@ -1,0 +1,12 @@
+{
+  "name": "journalism-skills",
+  "version": "1.0.0",
+  "description": "Agentic skills for journalism",
+  "author": {
+    "name": "spmartin823",
+    "url": "https://github.com/spmartin823"
+  },
+  "homepage": "https://github.com/spmartin823/journalism-skills",
+  "repository": "https://github.com/spmartin823/journalism-skills",
+  "license": "MIT"
+}
