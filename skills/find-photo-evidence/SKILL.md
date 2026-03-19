@@ -1,25 +1,23 @@
 ---
-description: Find photos with permissive licensing related to a given article.
+description: Find photos with permissive licensing related to a given story.
 ---
 
-You will be given a news article or a file path to one. If a file path is provided, read it first. If no article is provided, ask the user for one.
+You will be given a path to a story directory containing a `pitch.md`. Read the pitch to understand the story.
 
-Search the open internet and social media to find photos that are licensed in a way that allows use in the provided news article. Focus on:
+Search the open internet and social media to find photos that are licensed in a way that allows use in this news story. Focus on:
 
 1. Creative Commons licensed images (CC0, CC-BY, CC-BY-SA)
 2. Public domain images
 3. Government-produced images (which are typically public domain)
 4. Wire service or stock photos with open licenses
 
-For each photo found, provide:
+Store your results as a JSON array in a file called `photo-evidence.json` inside the story directory. Each entry should have the following fields:
 
 - `url`: direct link to the image or its hosting page
 - `description`: what the photo depicts
 - `license`: the specific license (e.g., CC-BY-4.0, Public Domain, US Government Work)
 - `attribution`: the required attribution text if any
 - `source`: where the photo was found (e.g., Wikimedia Commons, Flickr, government website)
-- `relevance`: why this photo is relevant to the article
+- `relevance`: why this photo is relevant to the story
 
-Store your results as a JSON array in `skill-output/find-photo-evidence/<YYYY-MM-DD_HH-MM-SS>/` within the journalism-skills plugin directory.
-
-Article to process: $ARGUMENTS
+Story directory: $ARGUMENTS
