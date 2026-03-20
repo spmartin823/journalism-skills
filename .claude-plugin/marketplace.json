@@ -1,5 +1,5 @@
 {
-  "name": "journalism-skills",
+  "name": "jskills",
   "owner": {
     "name": "spmartin823"
   },
@@ -7,11 +7,8 @@
     {
       "name": "journalism-skills",
       "description": "Agentic skills for journalism",
-      "version": "1.0.6",
-      "source": {
-        "source": "url",
-        "url": "https://github.com/spmartin823/journalism-skills.git"
-      }
+      "version": "1.0.7",
+      "source": "./"
     }
   ]
 }
