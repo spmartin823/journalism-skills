@@ -8,17 +8,16 @@ You will be given a comma-separated list of zip codes. Use these zip codes to sc
 
 Good stories are timely — they report on things that have happened recently. They also typically discuss outliers — a building that has received a ton of complaints, a cop that is paid extremely high, or a business that is opening in a space that hasn't been occupied in a long time for example.
 
-Take a look at the available sources and try to find story leads relevant to the provided zip codes. For each lead, create a directory inside `skill-output/stories/` at the root of the journalism-skills directory with the title of the story kebab-cased, containing a file `pitch.md`.
+Take a look at the available sources and try to find story leads relevant to the provided zip codes.
 
-Each `pitch.md` should include:
+For each lead you discover, call the `mcp__presspass__create_story_lead` tool with:
+- `title`: the headline
+- `zipCode`: the zip code this story is relevant to
+- `sourcesJson`: array of source description strings
+- `questionsJson`: array of question strings the story asks
+- `whyItMatters`: why this story matters to locals
+- `importanceScore`: a subjective score 0-9 of how important you think the story is
 
-- **Title**: the headline of the story
-- **Zip code**: the zip code this story is relevant to
-- **Sources**: the sources it draws from
-- **Questions**: the questions the story is asking
-- **Why it matters**: the reason this story matters to locals
-- **Importance score**: a subjective score of how important you think the story is for locals, out of 9
-
-Generate 10-20 pitches per invocation.
+Generate 10-20 leads per invocation.
 
 Zip codes to search: $ARGUMENTS

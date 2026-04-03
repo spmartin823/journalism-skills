@@ -2,7 +2,7 @@
 description: Find human sources that can comment on a story.
 ---
 
-You will be given a path to a story directory containing a `pitch.md`. Read the pitch to understand the story.
+You will be given a story lead ID and title as arguments (formatted as `<leadId> <title>`). First, call `mcp__presspass__get_story_leads` to retrieve the full lead details.
 
 Using the story, identify 5 people who would be strong human sources to comment on the story. For each person, find their contact information:
 
@@ -20,12 +20,14 @@ Prioritize people who are:
 4. Advocates or community leaders connected to the topic
 5. Academics or researchers who study the topic
 
-Store your results as a JSON array with the 5 sources in a file called `human-sources.json` inside the story directory. Each entry should have the following fields:
+For each source where you find an email address, call `mcp__presspass__create_outreach` with:
+- `leadId`: the story lead ID from the arguments
+- `recipientName`: the source's full name
+- `recipientEmail`: the source's email address
+- `organization`: the source's organization
+- `subject`: a professional subject line requesting comment on the story
+- `bodyText`: a professional email body introducing the reporter, explaining the story, and requesting an interview
 
-- `name`: string
-- `title`: string
-- `organization`: string
-- `relevance`: string (why this person is a good source for this story)
-- `contact`: object with fields `email`, `phone`, `twitter`, `linkedin`, and any other available handles
+These outreach drafts will require human approval before being sent.
 
-Story directory: $ARGUMENTS
+Story lead: $ARGUMENTS
